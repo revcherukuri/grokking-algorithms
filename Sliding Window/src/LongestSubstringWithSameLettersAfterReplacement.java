@@ -1,4 +1,5 @@
 /*
+    HARD
     Returns length of longest substring that will contain no more than one distinct character (all letters will be the same) after replacing r characters
  */
 

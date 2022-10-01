@@ -1,4 +1,5 @@
 /*
+    HARD
     Returns length of longest substring in a string with no repeating characters
  */
 

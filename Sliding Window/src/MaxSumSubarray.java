@@ -1,4 +1,5 @@
 /*
+    EASY
     Returns the maximum sum of all subarrays with size k
  */
 

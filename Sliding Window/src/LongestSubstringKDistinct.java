@@ -1,4 +1,5 @@
 /*
+    MEDIUM
     Returns maximum size of subarray in String with no more than k distinct characters
     ex. aabcd, 2 -> returns 3 because aab has 2 distinct characters and is the longest substring compared to other options ab, bc, cd.
  */

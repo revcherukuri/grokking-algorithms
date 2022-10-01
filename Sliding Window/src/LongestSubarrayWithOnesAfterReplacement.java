@@ -1,8 +1,9 @@
 /*
+    HARD
     Returns length of longest subarray that contains only 1's after replacing r 0's with 1's.
  */
 
-public class LongestSubstringWithOnesAfterReplacement {
+public class LongestSubarrayWithOnesAfterReplacement {
     public static void main (String [] args) {
         int [] input = {0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1};
         int r = 3;

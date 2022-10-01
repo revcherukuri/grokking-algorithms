@@ -1,4 +1,5 @@
 /*
+    MEDIUM
     Returns maximum number of fruits (characters) in two baskets, where each basket can hold one type of fruit
  */
 

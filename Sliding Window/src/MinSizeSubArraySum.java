@@ -1,8 +1,9 @@
 /*
+    EASY
     Returns smallest subarray size with sum less than S
  */
 
-public class MinSizeSubArraySum {
+public class MinSizeSubarraySum {
     public static void main (String [] args) {
         int minSize = findMinSubArray(8, new int[] {2, 1, 5, 1, 3, 2});
         System.out.println(minSize);
