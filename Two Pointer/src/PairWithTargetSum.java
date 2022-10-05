@@ -1,3 +1,9 @@
+/*
+    EASY
+    Returns indices of values in array that add to given target sum
+    Uses two approaches
+ */
+
 import java.util.HashMap;
 
 public class PairWithTargetSum {
