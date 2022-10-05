@@ -12,17 +12,17 @@ public class PairWithTargetSum {
         int target = 11;
         int [] sol1 = search1(arr, target);
         System.out.print("Two pointer:\n[");
-        for (int i : sol1) {
-            System.out.print(i);
-            if (i < 2) {
+        for (int i = 0; i < sol1.length; i++) {
+            System.out.print(sol1[i]);
+            if (i < sol1.length - 1) {
                 System.out.print(", ");
             }
         }
         System.out.print("]\n\nHashMap:\n[");
         int [] sol2 = search2(arr, target);
-        for (int i : sol2) {
-            System.out.print(i);
-            if (i < 2) {
+        for (int i = 0; i < sol2.length; i++) {
+            System.out.print(sol2[i]);
+            if (i < sol2.length - 1) {
                 System.out.print(", ");
             }
         }
@@ -32,7 +32,7 @@ public class PairWithTargetSum {
     /**
      * Two pointer approach
      * one goes from left to right, the other goes from right to left
-     * each iteration, we check if the sum is less than or greater than target. If less, since the array is sorted we know one of the addends must be larger so we increment left, the smaller value. If greater, for the same reason we decrement right.
+     * each iteration, we check if the sum is less than or greater than target. If less, since the array is sorted we know one of the addends needs to be larger so we increment left, the smaller value. If greater, for the same reason we decrement right.
      * if neither are true, we know the sum is equal and we have the solution
      */
     public static int[] search1 (int [] arr, int target) {
