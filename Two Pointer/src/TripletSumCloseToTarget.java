@@ -1,4 +1,5 @@
 /*
+    MEDIUM
     Returns triplet sum closest to or equal to target
  */
 
