@@ -4,27 +4,15 @@
  */
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class TripletSumToZero {
     public static void main (String [] args) {
         int [] arr  = {-3, 0, 1, 2, -1, 1, -2};
-        int [] sortedArr = arraySort(arr);
-        List<List<Integer>> sol = searchTriplets(sortedArr);
+        Arrays.sort(arr);
+        List<List<Integer>> sol = searchTriplets(arr);
         System.out.println(sol);
-    }
-
-    public static int[] arraySort (int [] arr) {
-        for (int i = 0; i < arr.length-1; i++) {
-            for (int j = 0; j < arr.length-1-i; j++) {
-                if (arr[j] > arr[j+1]) {
-                    int temp = arr[j];
-                    arr[j] = arr[j+1];
-                    arr[j+1] = temp;
-                }
-            }
-        }
-        return arr;
     }
 
     public static List<List<Integer>> searchTriplets (int [] sortedArr) {
