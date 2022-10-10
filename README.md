@@ -1,5 +1,5 @@
 # grokking-algorithms
-Implementation of various grokking patterns to solve algorithmic questions
+Patterns
 
 1. Sliding Window
 2. Two Pointers
