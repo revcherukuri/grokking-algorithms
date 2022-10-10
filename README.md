@@ -1,6 +1,4 @@
 # grokking-algorithms
-Patterns
-
 1. Sliding Window
 2. Two Pointers
 3. Fast and Slow pointers
