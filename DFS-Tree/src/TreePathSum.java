@@ -17,6 +17,21 @@ public class TreePathSum {
         boolean pathExists2 = searchForPath(root, 10);
         System.out.println(pathExists);
         System.out.println(pathExists2);
+        System.out.println("Recursive:");
+        pathExists = searchForPath (root, 23);
+        pathExists2 = searchForPath(root, 10);
+        System.out.println(pathExists);
+        System.out.println(pathExists2);
+    }
+
+    public static boolean searchForPathRecursive (TreeNode root, int sum) {         // Recursive approach
+        if (root == null) {
+            return false;
+        }
+        if (root.val == sum && root.left == null && root.right == null) {
+            return true;
+        }
+        return searchForPathRecursive(root.left, sum - root.val) || searchForPathRecursive(root.right, sum - root.val);
     }
 
     public static boolean searchForPath (TreeNode root, int sum) {              // Iterative Depth First approach using stack
