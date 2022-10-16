@@ -1,23 +1,22 @@
 /*
     MEDIUM
-    Determines whether or not possible task scheduling exists, where each vertex is a task and the edges are prerequisites
-    as long as all vertices are connected, and no cycle exists then a possible schedule exists
+    Builds off TaskScheduling, returns best possible order of completing all tasks
  */
 
 import java.util.*;
 
-public class TaskScheduling {
+public class TaskSchedulingOrder {
     public static void main (String [] args) {
         int [] [] edges = new int[][] {{0,1}, {0,2}, {1,3}, {1,4}, {2,5}, {3,6}, {4,6}, {5,4}, {5,6}};
-        boolean scheduleExists = sort (7, edges);
+        List<Integer> scheduleExists = sort (7, edges);
         System.out.println(scheduleExists);
 
         int [] [] edges2 = new int[][] {{0,1}, {0,2}, {1,3}, {3,1}, {1,4}, {2,5}, {3,6}, {4,6}, {5,4}, {5,6}};
-        boolean scheduleExists2 = sort(8, edges2);
+        List<Integer> scheduleExists2 = sort(8, edges2);
         System.out.println(scheduleExists2);
     }
 
-    public static boolean sort (int size, int [] [] edges) {
+    public static List<Integer> sort (int size, int [] [] edges) {
         List <Integer> result = new ArrayList<>();
         HashMap<Integer, Integer> inDegree = new HashMap<>();
         HashMap<Integer, List<Integer>> graph = new HashMap<>();
@@ -53,6 +52,9 @@ public class TaskScheduling {
             }
         }
 
-        return result.size() == size;
+        if (result.size() != size) {
+            return new ArrayList<>();
+        }
+        return result;
     }
 }
