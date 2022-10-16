@@ -18,9 +18,9 @@ public class TaskScheduling {
     }
 
     public static boolean sort (int size, int [] [] edges) {
-        List <Integer> result = new ArrayList<>();                      // sorted list to return
-        HashMap<Integer, Integer> inDegree = new HashMap<>();           // map of each vertex to it's in degree (number of incoming edges)
-        HashMap<Integer, List<Integer>> graph = new HashMap<>();        // map of graph, each vertex is mapped to list of it's children
+        List <Integer> result = new ArrayList<>();
+        HashMap<Integer, Integer> inDegree = new HashMap<>();
+        HashMap<Integer, List<Integer>> graph = new HashMap<>();
 
         for (int i = 0; i < size; i++) {
             inDegree.put(i, 0);
@@ -28,10 +28,10 @@ public class TaskScheduling {
         }
 
         for (int i = 0; i < edges.length; i++) {
-            int parent = edges[i][0];               // parent is first element in 2D array
-            int child = edges[i][1];                // child is second element in 2D array
+            int parent = edges[i][0];
+            int child = edges[i][1];
             graph.get(parent).add(child);
-            inDegree.put(child, inDegree.getOrDefault(child, 0) + 1);       // only increasing in degree of second element (child) because it being a child means there is another incoming edge
+            inDegree.put(child, inDegree.getOrDefault(child, 0) + 1); 
         }
 
         Queue<Integer> sources = new LinkedList<>();
